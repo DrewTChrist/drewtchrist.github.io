@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Cascading getattr
+title:  Cascading Hello World
 categories: [Python,Esoteric,Snippet]
 excerpt: This is just a snippet I made while messing around with getattr(). Valid python, all for fun.
 ---
