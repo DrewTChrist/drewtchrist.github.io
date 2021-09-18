@@ -6,6 +6,7 @@ permalink: /about/
 
 ![](/images/me.jpg)
 
+
 Idaho to PDX transplant with a knack for problem solving and writing code. I'm a big linux nerd, and I love Python and Vim!
 
 
