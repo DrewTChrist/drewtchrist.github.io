@@ -18,7 +18,6 @@ highlight_theme = "agola-dark"
 
 [extra]
 links = [
-    { title = "Mail", href = "mailto:andrewtaylorchristiansen@gmail.com" },
     { title = "GitHub", href = "https://github.com/drewtchrist" },
+    { title = "Projects", href = "/projects/" },
 ]
-#{ title = "LinkedIn", href = "https://linkedin.com/" }
