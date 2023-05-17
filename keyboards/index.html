@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title> | Keyboards</title>
+    
+    <link rel="stylesheet" href="https://drewtchrist.github.io/style.css?h=8b0c8e67741cde488629">
+    
+</head>
+<body>
+    
+<header class="space">
+    <a href="https:&#x2F;&#x2F;drewtchrist.github.io">&LeftArrow; Home</a>
+</header>
+
+    
+<main>
+    <h1>Keyboards</h1>
+    
+    <div class="space"></div>
+    <h3 id="keyboards">Keyboards</h3>
+<ul>
+<li>Nullbits Nibble
+<ul>
+<li>Firmware: <a href="https://github.com/drewtchrist/nibble-rp2040-rs">nibble-rp2040-rs</a></li>
+<li>MCU board: <a href="https://www.adafruit.com/product/5302">Adafruit KB2040</a></li>
+<li>Keycaps: </li>
+<li>Stabilizers:</li>
+<li>Switches: KTT Wine Red</li>
+</ul>
+</li>
+<li>Cantor (42 key)</li>
+<li>Cantor (36 key)</li>
+<li>CannonKeys Brutal 60
+<ul>
+<li>PCB: <a href="https://github.com/jpconstantineau/PyKey60">PyKey60</a></li>
+<li>Keycaps: <a href="https://cannonkeys.com/products/nicepbt-greyscale">NicePBT Greyscale</a></li>
+<li>Stabilizers: Cherry clip in</li>
+<li>Switches: Tecsee Ice Candy</li>
+</ul>
+</li>
+</ul>
+
+</main>
+
+    <div class="dark-mode-buttons">
+        <button class="dark-mode-button" id="dark-mode-on"><img src="https://drewtchrist.github.io/dark_mode.svg" width="24" height="24" alt="Dark mode" aria-label="dark mode toggle" title="Dark mode"></button>
+        <button class="dark-mode-button" id="dark-mode-off"><img src="https://drewtchrist.github.io/light_mode.svg" width="24" height="24" alt="Light mode" aria-label="light mode toggle" title="Light mode"></button>
+    </div>
+    <script>
+        const cls = document.body.classList;
+        const getSessionTheme = sessionStorage.getItem("theme");
+        if (getSessionTheme === "dark") {
+            cls.toggle("dark-mode", true);
+        } else if (getSessionTheme === "light") {
+            cls.toggle("dark-mode", false);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            cls.toggle("dark-mode", true);
+        }
+
+        document.getElementById("dark-mode-on").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", true);
+            sessionStorage.setItem("theme", "dark");
+        });
+        document.getElementById("dark-mode-off").addEventListener("click", function(e) {
+            cls.toggle("dark-mode", false);
+            sessionStorage.setItem("theme", "light");
+        });
+    </script>
+    <noscript>
+        <style>
+            .dark-mode-buttons {
+                display: none;
+            }
+        </style>
+    </noscript>
+</body>
+</html>
